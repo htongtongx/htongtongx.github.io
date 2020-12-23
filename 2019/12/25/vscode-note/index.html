@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huangtongwei.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="vue 格式化：如何优雅的使用VS Code+ESLint+Prettier写Vue程序 go断点调试:Windows + VS Code搭建 Go 开发环境mac VSCode安装GO语言依赖工具go vscode 断点调试 123456789&quot;configurations&quot;: [     &amp;#123;         &quot;name&quot;: &quot;Launch file&quot;,         &quot;type&quot;:">
+<meta name="keywords" content="vscode">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vscode百宝箱">
+<meta property="og:url" content="https://huangtongwei.cn/2019/12/25/vscode-note/index.html">
+<meta property="og:site_name" content="黄童威笔记本">
+<meta property="og:description" content="vue 格式化：如何优雅的使用VS Code+ESLint+Prettier写Vue程序 go断点调试:Windows + VS Code搭建 Go 开发环境mac VSCode安装GO语言依赖工具go vscode 断点调试 123456789&quot;configurations&quot;: [     &amp;#123;         &quot;name&quot;: &quot;Launch file&quot;,         &quot;type&quot;:">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-23T03:09:48.964Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vscode百宝箱">
+<meta name="twitter:description" content="vue 格式化：如何优雅的使用VS Code+ESLint+Prettier写Vue程序 go断点调试:Windows + VS Code搭建 Go 开发环境mac VSCode安装GO语言依赖工具go vscode 断点调试 123456789&quot;configurations&quot;: [     &amp;#123;         &quot;name&quot;: &quot;Launch file&quot;,         &quot;type&quot;:">
+
+<link rel="canonical" href="https://huangtongwei.cn/2019/12/25/vscode-note/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>vscode百宝箱 | 黄童威笔记本</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">黄童威笔记本</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://huangtongwei.cn/2019/12/25/vscode-note/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄童威">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄童威笔记本">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          vscode百宝箱
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-12-25 21:50:27" itemprop="dateCreated datePublished" datetime="2019-12-25T21:50:27+08:00">2019-12-25</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-23 11:09:48" itemprop="dateModified" datetime="2020-12-23T11:09:48+08:00">2020-12-23</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h4 id="vue-格式化："><a href="#vue-格式化：" class="headerlink" title="vue 格式化："></a>vue 格式化：</h4><p><a href="https://monkeywie.github.io/2018/08/03/vscode-vue-eslint-prettier/" target="_blank" rel="noopener">如何优雅的使用VS Code+ESLint+Prettier写Vue程序</a></p>
+<h2 id="go断点调试"><a href="#go断点调试" class="headerlink" title="go断点调试:"></a>go断点调试:</h2><p><a href="https://www.jianshu.com/p/4826466aa6bb" target="_blank" rel="noopener">Windows + VS Code搭建 Go 开发环境</a><br><br><a href="https://www.jianshu.com/p/f952042af8ff" target="_blank" rel="noopener">mac VSCode安装GO语言依赖工具</a><br><br><a href="https://www.cnblogs.com/ficow/p/6785905.html" target="_blank" rel="noopener">go vscode 断点调试</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">"configurations": [</span><br><span class="line">     &#123;</span><br><span class="line">         <span class="attr">"name"</span>: <span class="string">"Launch file"</span>,</span><br><span class="line">         <span class="attr">"type"</span>: <span class="string">"go"</span>,</span><br><span class="line">         <span class="attr">"request"</span>: <span class="string">"launch"</span>,</span><br><span class="line">         <span class="attr">"mode"</span>: <span class="string">"debug"</span>,</span><br><span class="line">         <span class="attr">"program"</span>: <span class="string">"$&#123;workspaceRoot&#125;/main.go"</span></span><br><span class="line">     &#125;</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
+<h2 id="vim插件的设置"><a href="#vim插件的设置" class="headerlink" title="vim插件的设置:"></a>vim插件的设置:</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"vim.useCtrlKeys": false</span><br></pre></td></tr></table></figure>
+<h2 id="Remote-WSL"><a href="#Remote-WSL" class="headerlink" title="Remote-WSL:"></a>Remote-WSL:</h2><ol>
+<li>“在 Windows 端安装 Visual Studio Code Insiders”<br></li>
+<li>安装 Remote Development 扩展包<br></li>
+<li>F1 remote wsl<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">在 VS Code 中打开「适用于 Linux 的 Windows 子系统」中的文件夹与从命令提示符打开 Windows 文件夹非常相似。</span><br><span class="line"></span><br><span class="line">打开 WSL 终端窗口（使用开始菜单项或从命令提示符键入 wsl ）。</span><br><span class="line"></span><br><span class="line">切换到你要在 VS Code 中打开的文件夹（包括但不限于 Windows 文件系统挂载点，如 /mnt/c）</span><br><span class="line"></span><br><span class="line">在终端中输入 code-insiders .。在第一次执行此操作时，你应该看到 VS code 在获取运行于 WSL 所需的组件。这应该只需要很短的时间，而且只需要执行一次。</span><br><span class="line"></span><br><span class="line">片刻之后，一个新的 VS Code 窗口将会出现，你将看到一个 VS Code 正在 WSL 中打开文件夹的通知。</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="关闭vscode文件预览模式"><a href="#关闭vscode文件预览模式" class="headerlink" title="关闭vscode文件预览模式"></a>关闭vscode文件预览模式</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">"workbench.editor.enablePreview": false,</span><br></pre></td></tr></table></figure>
+<h2 id="vscode侧边栏找不到搜索按钮"><a href="#vscode侧边栏找不到搜索按钮" class="headerlink" title="vscode侧边栏找不到搜索按钮"></a>vscode侧边栏找不到搜索按钮</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">"search.location": "panel" //改成</span><br><span class="line">"search.location": "sidebar"</span><br></pre></td></tr></table></figure>
+<h2 id="Linux下配置vscode终端字体："><a href="#Linux下配置vscode终端字体：" class="headerlink" title="Linux下配置vscode终端字体："></a>Linux下配置vscode终端字体：</h2><blockquote>
+<p>在Ubuntu 18.04.1LTS 下的解决方案（亲测可用），<br><br>其他版本linux做参考。</p>
+</blockquote>
+<ol>
+<li><p>下载安装字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$cd /usr/share/fonts/truetype/</span><br><span class="line">$sudo git clone https://github.com/abertsch/Menlo-for-Powerline.git</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>刷新字体</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$sudo fc-cache -f -v</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>回到  Vs Code的用户设置.json  中加入以下代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;terminal.integrated.fontFamily&quot;: &quot;Menlo for Powerline&quot;,</span><br><span class="line">&quot;editor.fontFamily&quot;: &quot;&apos;monospace&apos;,&apos;Droid Sans Mono&apos;, &apos;monospace&apos;, monospace, &apos;Droid Sans Fallback&apos;&quot;,</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="vscode配置"><a href="#vscode配置" class="headerlink" title="vscode配置"></a>vscode配置</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"vim.useCtrlKeys"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"go.inferGopath"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"python.linting.pylintEnabled"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"python.linting.flake8Enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="attr">"python.linting.enabled"</span>: <span class="literal">true</span>,</span><br><span class="line">    //.vue文件template格式化支持，并使用js-beautify-html插件</span><br><span class="line">    "vetur.format.defaultFormatter.html": "js-beautify-html",</span><br><span class="line">    //js-beautify-html格式化配置，属性强制换行</span><br><span class="line">    //文档：https://github.com/beautify-web/js-beautify#css--html</span><br><span class="line">    "vetur.format.defaultFormatterOptions": &#123;</span><br><span class="line">      "js-beautify-html": &#123;</span><br><span class="line">        "wrap_line_length": 170,</span><br><span class="line">        "wrap_attributes": "auto",</span><br><span class="line">        "end_with_newline": false</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    //根据文件后缀名定义vue文件类型</span><br><span class="line">    "files.associations": &#123;</span><br><span class="line">      "*.vue": "vue"</span><br><span class="line">    &#125;,</span><br><span class="line">    //保存时eslint自动修复错误</span><br><span class="line">    "eslint.validate": [</span><br><span class="line">      "javascript",</span><br><span class="line">      "javascriptreact",</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"language"</span>: <span class="string">"vue"</span>,</span><br><span class="line">        <span class="attr">"autoFix"</span>: <span class="literal">true</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    "eslint.autoFixOnSave": true,</span><br><span class="line">    "python.pythonPath": "C:\\Users\\mayn\\envs\\Gerapy\\Scripts\\python.exe"</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="vscode-vue配置"><a href="#vscode-vue配置" class="headerlink" title="vscode vue配置"></a>vscode vue配置</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"eslint.autoFixOnSave"</span>: <span class="literal">true</span>, </span><br><span class="line">    <span class="attr">"eslint.validate"</span>: [ </span><br><span class="line">        <span class="string">"javascript"</span>, <span class="string">"javascriptreact"</span>, </span><br><span class="line">        &#123; <span class="attr">"language"</span>: <span class="string">"html"</span>, <span class="attr">"autoFix"</span>: <span class="literal">true</span> &#125;, </span><br><span class="line">        &#123; <span class="attr">"language"</span>: <span class="string">"vue"</span>, <span class="attr">"autoFix"</span>: <span class="literal">true</span> &#125; ], </span><br><span class="line">    <span class="attr">"eslint.options"</span>: &#123; <span class="attr">"configFile"</span>: <span class="string">"./.eslintrc.js"</span> &#125;, </span><br><span class="line">    "vetur.format.defaultFormatter.html": "js-beautify-html", //格式化html </span><br><span class="line">    “editor.formatOnSave": true, //是否保存格式化 </span><br><span class="line">    "editor.tabSize": 2 // tab锁紧2个空格 </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="es6自动格式化语法"><a href="#es6自动格式化语法" class="headerlink" title="es6自动格式化语法"></a>es6自动格式化语法</h2><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">"eslint.autoFixOnSave": true,</span><br><span class="line">"eslint.validate": [</span><br><span class="line">    "javascript",</span><br><span class="line">    <span class="string">"javascriptreact"</span></span><br><span class="line">    , &#123; "language": "html", "autoFix": true &#125;</span><br><span class="line">    , &#123; "language": "vue", "autoFix": true &#125;</span><br><span class="line">],</span><br></pre></td></tr></table></figure>
+<h2 id="对选中的文本进行全部编辑"><a href="#对选中的文本进行全部编辑" class="headerlink" title="对选中的文本进行全部编辑"></a>对选中的文本进行全部编辑</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">alt+enter</span><br></pre></td></tr></table></figure>
+<h2 id="显示当前文件函数变量"><a href="#显示当前文件函数变量" class="headerlink" title="显示当前文件函数变量"></a>显示当前文件函数变量</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">win+p 输入@</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/vscode/" rel="tag"># vscode</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/12/25/mysql-note/" rel="prev" title="mysql百宝箱">
+      <i class="fa fa-chevron-left"></i> mysql百宝箱
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/12/25/css-note/" rel="next" title="css百宝箱">
+      css百宝箱 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-格式化："><span class="nav-number">1.</span> <span class="nav-text">vue 格式化：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#go断点调试"><span class="nav-number"></span> <span class="nav-text">go断点调试:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vim插件的设置"><span class="nav-number"></span> <span class="nav-text">vim插件的设置:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Remote-WSL"><span class="nav-number"></span> <span class="nav-text">Remote-WSL:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关闭vscode文件预览模式"><span class="nav-number"></span> <span class="nav-text">关闭vscode文件预览模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode侧边栏找不到搜索按钮"><span class="nav-number"></span> <span class="nav-text">vscode侧边栏找不到搜索按钮</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux下配置vscode终端字体："><span class="nav-number"></span> <span class="nav-text">Linux下配置vscode终端字体：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode配置"><span class="nav-number"></span> <span class="nav-text">vscode配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#vscode-vue配置"><span class="nav-number"></span> <span class="nav-text">vscode vue配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#es6自动格式化语法"><span class="nav-number"></span> <span class="nav-text">es6自动格式化语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对选中的文本进行全部编辑"><span class="nav-number"></span> <span class="nav-text">对选中的文本进行全部编辑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#显示当前文件函数变量"><span class="nav-number"></span> <span class="nav-text">显示当前文件函数变量</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">黄童威</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄童威</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>

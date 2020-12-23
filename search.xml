@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[git分支管理]]></title>
+    <url>%2F2020%2F12%2F23%2Fgit-manage%2F</url>
+    <content type="text"><![CDATA[创建新功能分支1git checkout -b feature-unit-test dev 创建fixbug分支1git checkout -b hotfix-1.2.1 master 当开发新功能或修复bug合并分支需要用”–no-ff”1git merge --no-ff hotfix-1.2.1 删除分支1git branch -d feature-x 删除远程分支1git push origin -d feature-wxpay 当展示离开当前分支的时候临时缓存代码，避免合并到其它分支1234//暂时缓存代码git stash//从缓存中恢复代码git stash pop]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[好文章百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fgood-article-list%2F</url>
+    <content type="text"><![CDATA[如何打造一个高效的工作环境（一） 如何打造一个高效的工作环境（二） 《Effective Go》中英双语版 前端九部 - 入门者手册2019 RESTful API 最佳实践 大数据入门指南 程序员练级攻略：进阶]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[前端百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fjs-note%2F</url>
+    <content type="text"><![CDATA[npm指定github地址和分支安装包:1npm install git+https://github.com:LLK/scratch-blocks.git#local-closure ubuntu 安装puppeteer，linux使用puppeteerFAQs : error nunjucks@3.1.3: The engine “node” is incompatible with this module. Expected version “&gt;= 6.9.0 &lt;= 11.0.0-0”. Got “11.10.0” 解决方法：忽略引擎检查1yarn install —ignore-engines vc++构建环境 vsbuild123https://visualstudio.microsoft.com/zh-hans/thank-you-downloading-visual-studio/?sku=BuildTools&amp;rr=https%3A%2F%2Fwww.jianshu.com%2Fp%2Fb4d739b43a23npm install --global --production windows-build-tools es6字符串拼接1234567const welcome = &apos;You have logged in as &apos; + first + &apos; &apos; + last + &apos;.&apos; const db = &apos;http://&apos; + host + &apos;:&apos; + port + &apos;/&apos; +简写为：const welcome = `You have logged in as $&#123;first&#125; $&#123;last&#125;`;const db = `http://$&#123;host&#125;:$&#123;port&#125;/$&#123;database&#125;`; sort排序数组对象(降序)1234567891011121314var compare = function (prop) &#123; return function (obj1, obj2) &#123; var val1 = obj1[prop]; var val2 = obj2[prop];if (val1 &lt; val2) &#123; return -1; &#125; else if (val1 &gt; val2) &#123; return 1; &#125; else &#123; return 0; &#125; &#125;&#125;//调用arr.sort(compare("age")) es6 find函数123pet = pets.find(pet =&gt; pet.type ==='Dog' &amp;&amp; pet.name === 'Tommy');console.log(pet); // &#123; type: 'Dog', name: 'Tommy' &#125; es6展开运算符12const odd = [1,3,5]const nums = [2,4,6,...odd] 【js】：解构值12345678910111213141516const observable = require('mobx/observable'); const action = require('mobx/action'); const runInAction = require('mobx/runInAction'); const store = this.props.store; const form = this.props.form; const loading = this.props.loading; const errors = this.props.errors; const entity = this.props.entity;import &#123; observable, action, runInAction &#125; from 'mobx'; const &#123; store, form, loading, errors, entity &#125; = this.props;//甚至可以指定自己的变量名：const &#123; store, form, loading, errors, entity:contact &#125; = this.props; 判断是否为null或者没有定义1const variable2 = variable1 || 'new'; 【npm】：升级node12npm install -g nn stable 【npm】：升级npm12npm install -g npmnpm install npm@latest -g]]></content>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[爬虫百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fspider-note%2F</url>
+    <content type="text"><![CDATA[定位文本长度大于10的超链接1//a[string-length(text())&gt;10]]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[vue百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fvue-note%2F</url>
+    <content type="text"><![CDATA[网站虚拟空间(apache、php)部署vue history模式的html文件https://cli.vuejs.org/zh/guide/deployment.html#%E4%BD%BF%E7%94%A8-history-pushstate-%E7%9A%84%E8%B7%AF%E7%94%B1 https://www.jb51.net/article/142831.htm MVVM M是model代表数据层，v是view代表视图层，vm是ViewModel,特点是v层触发事件之后会触发vm层的事件，vm层的事件会改变m层数据，数据改变之后会通过vm层重新传到v层 生命周期]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[python百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fpython-note%2F</url>
+    <content type="text"><![CDATA[虚拟环境12345678910#linux:virtualenv -p python3 athenasource athen/bin/activatedeactivate#win:pip install virtualenvpip install virtualenvwrapperpip install virtualenvwrapper-winmkvirtualenv XXXdeactivate re正则表达式12345import repattern = re.compile(r'(http[sS]*://.*?)/.*')match = pattern.match('http://op0ooxcfn.bkt.clouddn.com/flower_logo')if match: print(match.group()) flask 导出生成models文件1flask-sqlacodegen --flask mysql+pymysql://root:我是密码@blackdora.xyz/athena_new --outfile modules.py pip国内源:pip3 install -i https://pypi.douban.com/simple 阿里云 http://mirrors.aliyun.com/pypi/simple/中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/豆瓣(douban) http://pypi.douban.com/simple/清华大学 https://pypi.tuna.tsinghua.edu.cn/simple/中国科学技术大学 http://pypi.mirrors.ustc.edu.cn/simple/ pip包的环境变量路径/home/user/.local/bin/ export PATH=\$HOME/.local/bin:/usr/local/bin:\$PATH Gerapy官方文档12345workon gerapycd workspacegerapy runservergerapy migrateD:\code\Gerapy\workspace\gerapy&gt;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[css百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fcss-note%2F</url>
+    <content type="text"><![CDATA[flex布局：垂直加水平居中1234display: flex;flex-direction: column;justify-content: center;align-items: center; div或img图片高度随宽度自适应 http://blog.csdn.net/zh_rey/article/details/6966623212345678910111213141516171819202122232425.el-carousel__item&#123; width: 100%; position:relative; z-index:2; display: block; &#125; .el-carousel__item img&#123; position:absolute; top:0; bottom:0 ; left:0 ; right:0 ; width:100% ; margin:auto ; z-index: 1 ; *zoom:1 ; &#125; .el-carousel__item:before &#123; content: ""; display: inline-block; padding-bottom: 100%; width: 0.1px; /*必须要有数值，否则无法把高度撑起来*/ vertical-align: middle; &#125; .el-carousel__container&#123;height: 100% !important&#125; scss语法 https://www.sassmeister.com/1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768@mixin center($width,$height)&#123; width: $width; height: $height; position: absolute; top: 50%; left: 50%; margin-top: -($height) / 2; margin-left: -($width) / 2;&#125;div&#123; @include center(100px,80px);&#125;p&#123; @include center(80,40px);&#125;%spriteAll&#123; bakckground:url(images/sprite.png) no-repeat; color:blue;&#125;.sprite-1&#123; @extend %spriteAll; background-position:0 -30px;&#125;.sprite-2&#123; @extend %spriteAll; background-position:0 -60px;&#125;$color1:red;$color2:green;$color3:blue;body&#123; color:$color1; .column &#123; color:$color2; .content-title &#123; color:$color3; &#125; &#125;&#125;div&#123; width:100px; height:100px; font: &#123; family:Arial; size:14px; weight:bold; &#125;&#125;div&#123; width:(100px + 23px);&#125;]]></content>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vscode百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fvscode-note%2F</url>
+    <content type="text"><![CDATA[vue 格式化：如何优雅的使用VS Code+ESLint+Prettier写Vue程序 go断点调试:Windows + VS Code搭建 Go 开发环境mac VSCode安装GO语言依赖工具go vscode 断点调试 123456789"configurations": [ &#123; "name": "Launch file", "type": "go", "request": "launch", "mode": "debug", "program": "$&#123;workspaceRoot&#125;/main.go" &#125; ] vim插件的设置:1"vim.useCtrlKeys": false Remote-WSL: “在 Windows 端安装 Visual Studio Code Insiders” 安装 Remote Development 扩展包 F1 remote wsl123456789在 VS Code 中打开「适用于 Linux 的 Windows 子系统」中的文件夹与从命令提示符打开 Windows 文件夹非常相似。打开 WSL 终端窗口（使用开始菜单项或从命令提示符键入 wsl ）。切换到你要在 VS Code 中打开的文件夹（包括但不限于 Windows 文件系统挂载点，如 /mnt/c）在终端中输入 code-insiders .。在第一次执行此操作时，你应该看到 VS code 在获取运行于 WSL 所需的组件。这应该只需要很短的时间，而且只需要执行一次。片刻之后，一个新的 VS Code 窗口将会出现，你将看到一个 VS Code 正在 WSL 中打开文件夹的通知。 关闭vscode文件预览模式1"workbench.editor.enablePreview": false, vscode侧边栏找不到搜索按钮12"search.location": "panel" //改成"search.location": "sidebar" Linux下配置vscode终端字体： 在Ubuntu 18.04.1LTS 下的解决方案（亲测可用），其他版本linux做参考。 下载安装字体 12$cd /usr/share/fonts/truetype/$sudo git clone https://github.com/abertsch/Menlo-for-Powerline.git 刷新字体 1$sudo fc-cache -f -v 回到 Vs Code的用户设置.json 中加入以下代码 12&quot;terminal.integrated.fontFamily&quot;: &quot;Menlo for Powerline&quot;,&quot;editor.fontFamily&quot;: &quot;&apos;monospace&apos;,&apos;Droid Sans Mono&apos;, &apos;monospace&apos;, monospace, &apos;Droid Sans Fallback&apos;&quot;, vscode配置123456789101112131415161718192021222324252627282930313233&#123; "vim.useCtrlKeys": false, "go.inferGopath": false, "python.linting.pylintEnabled": false, "python.linting.flake8Enabled": true, "python.linting.enabled": true, //.vue文件template格式化支持，并使用js-beautify-html插件 "vetur.format.defaultFormatter.html": "js-beautify-html", //js-beautify-html格式化配置，属性强制换行 //文档：https://github.com/beautify-web/js-beautify#css--html "vetur.format.defaultFormatterOptions": &#123; "js-beautify-html": &#123; "wrap_line_length": 170, "wrap_attributes": "auto", "end_with_newline": false &#125; &#125;, //根据文件后缀名定义vue文件类型 "files.associations": &#123; "*.vue": "vue" &#125;, //保存时eslint自动修复错误 "eslint.validate": [ "javascript", "javascriptreact", &#123; "language": "vue", "autoFix": true &#125; ], "eslint.autoFixOnSave": true, "python.pythonPath": "C:\\Users\\mayn\\envs\\Gerapy\\Scripts\\python.exe" &#125; vscode vue配置1234567891011&#123; "eslint.autoFixOnSave": true, "eslint.validate": [ "javascript", "javascriptreact", &#123; "language": "html", "autoFix": true &#125;, &#123; "language": "vue", "autoFix": true &#125; ], "eslint.options": &#123; "configFile": "./.eslintrc.js" &#125;, "vetur.format.defaultFormatter.html": "js-beautify-html", //格式化html “editor.formatOnSave": true, //是否保存格式化 "editor.tabSize": 2 // tab锁紧2个空格 &#125; es6自动格式化语法1234567"eslint.autoFixOnSave": true,"eslint.validate": [ "javascript", "javascriptreact" , &#123; "language": "html", "autoFix": true &#125; , &#123; "language": "vue", "autoFix": true &#125;], 对选中的文本进行全部编辑1alt+enter 显示当前文件函数变量1win+p 输入@]]></content>
+      <tags>
+        <tag>vscode</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mysql百宝箱]]></title>
+    <url>%2F2019%2F12%2F25%2Fmysql-note%2F</url>
+    <content type="text"><![CDATA[Text类型的大小区别 https://www.cnblogs.com/exmyth/p/8747293.html 表头 表头 TINYTEXT 256 bytes * TEXT 65,535 bytes ~64kb MEDIUMTEXT 16,777,215 bytes ~16MB LONGTEXT 4,294,967,295 bytes ~4GB 设置外键1alter table `limited` add constraint fk_limited_goods_id foreign key(goods_id) references `goods`(id); mysql8.0转旧版本的验证方式 8.0安全验证方式:caching_sha2_password 1ALTER USER &apos;root&apos;@&apos;%&apos; IDENTIFIED WITH mysql_native_password BY &apos;sdb@2019&apos;; concat用法1select concat(&apos;&#123;value:\&apos;&apos;,code,&apos;\&apos;,label:\&apos;&apos;,name,&apos;\&apos;,children:[&apos;,(select concat(GROUP_CONCAT(CONCAT(&apos;&#123;value:\&apos;&apos;,b.code,&apos;\&apos;,label:\&apos;&apos;,b.name,&apos;\&apos;&#125;&apos;)),&apos;]&#125;,&apos;) from area b where b.parent_code=a.code group by b.parent_code)) from area a where layer=0]]></content>
+      <tags>
+        <tag>mysql sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[mac百宝箱]]></title>
+    <url>%2F2019%2F12%2F24%2Fmac-note%2F</url>
+    <content type="text"><![CDATA[键盘快捷键符号Command（或 Cmd）⌘Shift ⇧Option（或 Alt）⌥Control（或 Ctrl）⌃Caps Lock ⇪ FAQs: select: error: tool ‘xcodebuild’ requires Xcode, but active developer directory ‘/Library/Developer/CommandLineTools’ is a command line tools instance 找不到xcodebuild 1sudo xcode-select —switch /Applications/Xcode.app/Contents/Developer]]></content>
+      <tags>
+        <tag>mac</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[go 百宝箱]]></title>
+    <url>%2F2019%2F12%2F24%2Fgo-note%2F</url>
+    <content type="text"><![CDATA[go mod 的使用12345678# xxx表示项目的根域名go mod init "xxx"# 映射go mod edit -replace=golang.org/x/sys@v0.0.0=github.com/golang/sys@v0.0.0# 执行以下命令会自动分析项目里的依赖关系同步到go.mod文件中，同时创建go.sum文件go mod tidy# 直接使用这个命令就可以把GOPATH/src目录下的依赖包同步到当前项目目录中go mod vendor 设置国内源12export GOPROXY=https://goproxy.ioexport GOPROXY=https://mirrors.aliyun.com/goproxy/ go 可能需要用到的环境变量123456export GOROOT=/usr/local/goexport GOARCH=amd64export GOPATH=/usr/local/gopathexport GOBIN=$GOPATH/binexport PATH=$PATH:$GOPATH/binexport GOBIN=/home/linuxbrew/.linuxbrew/bin/ 开启或关闭go mod1234export GO111MODULE=auto#auto 自动#on 使用mod#off 不使用mod go类型转换 转载：https://www.jb51.net/article/119164.htm int转string12s := strconv.Itoa(i)s := strconv.FormatInt(int64(i), 10) int64转string12i := int64(123)s := strconv.FormatInt(i, 10) string转int1i, err := strconv.Atoi(s)) string转int641i, err := strconv.ParseInt(s, 10, 64) go 字符串操作 转载：https://blog.csdn.net/li_101357/article/details/80241224123456# 子串substr在s中，返回truefunc Contains(s, substr string) bool# chars中任何一个Unicode代码点在s中，返回truefunc ContainsAny(s, chars string) bool# Unicode代码点r在s中，返回truefunc ContainsRune(s string, r rune) bool 电子书《Effective Go》中英双语版]]></content>
+      <tags>
+        <tag>go</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[python3 virtualenv安装与使用]]></title>
+    <url>%2F2019%2F07%2F24%2Fpython3-virtualenv%2F</url>
+    <content type="text"><![CDATA[12345pip install virtualenvpip install virtualenvwrapperpip install virtualenvwrapper-winmkvirtualenv XXXdeactivate]]></content>
+      <tags>
+        <tag>python</tag>
+        <tag>venv</tag>
+        <tag>virtualenv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git百宝箱]]></title>
+    <url>%2F2019%2F05%2F03%2Fgit-data%2F</url>
+    <content type="text"><![CDATA[git 代理设置1234git config --global http.proxy 'http://127.0.0.1:1087'git config --global https.proxy 'http://127.0.0.1:1087'git config --global http.proxy 'socks5://127.0.0.1:1086'git config --global https.proxy 'socks5://127.0.0.1:1086' git取消代理12git config --global --unset http.proxygit config --global --unset https.proxy git查看代理方法一1cat ~/.gitconfig 方法二1git config --global http.proxy 删除git已缓存的文件夹：12git rm --cached &quot;文件路径&quot;git rm -r --cached .vscode/ 设置git的默认编辑器为vim:1git config --global core.editor vim 注释填写错误重填命令:1git commi --amend merge合并到主分支的正确方式1git merge --no-ff feat-homepage 删除本地分支1git branch -d git提交规范 https://www.yuque.com/fe9/basic type 是用于说明该 commit 的类型的，一般我们会规定 type 的类型如下：12345678910111213feat: 新功能(feature)&lt;br&gt;fix: 修复 bug&lt;br&gt;docs: 文档(documents)&lt;br&gt;style: 代码格式(不影响代码运行的格式变动，注意不是指 CSS 的修改)&lt;br&gt;refactor: 重构(既不是新增功能，也不是修改 bug 的代码变动)&lt;br&gt;test: 提交测试代码(单元测试，集成测试等)&lt;br&gt;chore: 构建或辅助工具的变动&lt;br&gt;misc: 一些未归类或不知道将它归类到什么方面的提交&lt;br&gt;scope。scope 说明 commit 影响的范围，比如数据层，控制层，视图层等等，这个需要视具体场景与项目的不同而灵活变动&lt;br&gt;subject。subject 是对于该 commit 目的的简短描述&lt;br&gt;使用第一人称现在时的动词开头，比如 modify 而不是 modified 或 modifies&lt;br&gt;首字母小写，并且结尾不加句号&lt;br&gt;ISSUEE_ID。这个与公司的需求管理与项目管理有关，假设你的项目放在 github 上，你的需求或者 bug 修复可能会有对应的 issues 记录，你可以加到你的 commit 信息中如 issue-37938634。&lt;br&gt; 强制将两个不相干的仓库合并1git pull origin master --allow-unrelated-histories 分支开发策略分支管理-廖雪峰 强制覆盖远程分支1git push origin 分支名 —force 测试ssh_key是否有效1ssh -T git@github.com git未知1git的unshallow和--depth=1 提交指定文件夹下的所有文件到指定分支git subtree push —prefix=dist origin gh-pagesgit subtree push —prefix=dist git@github.com:htongxxx/xxxx.git gh-pagesgit push using: git@github.com:htongxxxxx/xxxx.git gh-pages]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[linux百宝箱]]></title>
+    <url>%2F2019%2F01%2F25%2Flinux-note%2F</url>
+    <content type="text"><![CDATA[根据端口杀进程12lsof -i:8080kill -9 42624 grep 筛选参数12ps -aux | grep mysqlls -l bin | grep mysql #查看二进制的软链接 后台运行1nohup command &gt; myout.file 2&gt;&amp;1 &amp; 查看shell bash1cat /etc/shells 切换shell环境1emulate bash alias1alias runphp="php -t restful/ -S localhost:8000" 查看进程的程序路径1netstat -nlp 显示最后登录的终端1last 改变文件夹权限1sudo chown -R $(whoami) testapp 查找包含”xxx”文件名的文件12find ~ -iname "xxxx"find / -name 'scrapyd-deploy' //全局搜索文件 软链接 ln1234567sudo ln -s /opt/node-v6.9.5-linux-x64/bin/cnpm /usr/local/bin/cnpm//生成软连接ln -s /mnt/d/code .//正确的删除方式（删除软链接，但不删除实际数据）rm -rf ./test_chk_ln//错误的删除方式,(这样就会把原来test_chk下的内容删除)rm -rf ./test_chk_ln/ tar.gz压缩解压说明12345678//解压：tar zxvf filename.tar.gz//压缩：tar zcvf filename.tar.gz dirname//z：通过gzip支持压缩或解压缩。还有其他的压缩或解压缩方式，比如j表示bzip2的方式。//x：解压缩。c是压缩。//v：在压缩或解压缩过程中显示正在处理的文件名//f：f后面必须跟上要处理的文件名。 将文件夹压缩到zip中，并排除指定文件夹1zip -r 12306.zip 12306/ -x 12306/venv/* -x 12306/ticket/* -x "cloud_backweb/download/wordfile/*" 给二进制赋值执行权限1chmod +x gitea 获取指定文件夹的大小1du -sh market | sort -n 查看当前目录下各文件大小1du -h --max-depth=1 查找进程中包含“xxxx”的多个pid12ps -ef|grep "xxxx"|grep -v grep|cut -c 9-15ps -ef | grep "xxxx" | grep -v grep | awk '&#123;print $2&#125;' 查找包含“xxx”的进程并杀死12ps -ef|grep "xxx"|grep -v grep|cut -c 9-15|xargs kill -9# 转载地址:https://www.cnblogs.com/joshua317/p/9235811.html apt-get 相关命令12apt-get remove xxx //会删除软件包而保留软件的配置文件apt-get purge xxx //会同时清除软件包和软件的配置文件 zsh123export PATH=$HOME/bin:/usr/local/bin:$PATH:/home/htongtongx/.local/binexport GOBIN=/home/linuxbrew/.linuxbrew/bin/export PATH=$PATH:$GOPATH/bin 在ubuntu14.04下python3.4升级3.6 when update python3.4 to python3.6 on ubuntu 14.04. The following solved me:1wget https://bootstrap.pypa.io/ez_setup.py -O - | python3 linux配置文件加载顺序12345/etc/profile/etc/environment~/.bash_profile~/.bashrc/etc/bashrc 查看 history 最后 5 条命令:123456# history | tail -510068 hexo new "history of linux"10069 export HISTTIMEFORMAT='%F %T '10070 history10071 history | more10072 history | tail 5 执行 history 第 10072 条命令:1# !10072 参考：History（历史）命令用法 15 例Linux history 命令小结 centos下安装nginx123rpm -ivh http://nginx.org/packages/centos/7/noarch/RPMS/nginx-release-centos-7-0.el7.ngx.noarch.rpmyum install -y nginx/usr/sbin/nginx -s reload 查看进程并kill掉12ps -ef | grep nginxkill -9 xxxx centos下安装supervisor123456789yum install epel-releaseyum install -y supervisorsystemctl enable supervisord # 开机自启动systemctl start supervisord # 启动supervisord服务systemctl status supervisord # 查看supervisord服务状态ps -ef|grep supervisord # 查看是否存在supervisord进程supervisorctl status 查看进程状态supervisorctl reload 重启supervisordsupervisorctl start|stop|restart 启动关闭重启进程]]></content>
+      <tags>
+        <tag>linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[docker百宝箱]]></title>
+    <url>%2F2019%2F01%2F22%2Fdocker-note%2F</url>
+    <content type="text"><![CDATA[docker 进入容器终端:12docker exec -it container_name bashdocker exec -it 638b10223b73 /bin/bash docker 查询资源占用:1docker stats 查看docker日志输出1sudo docker logs -f -t —tail 行数 容器名 进入容器1docker exec -it 638b10223b73 /bin/bash 新建一个docker容器1docker run --restart=always --name=abc -e PASSWORD=我是密码 -e METHOD=aes-128-ctr -p 6743:8388 -p 6743:8388/udp -d abcabc/abcabc-libev 好文章docker-cheat-sheet docker-compose 的mysql主从docker1234567891011121314151617181920212223242526272829303132version: "3"services: mysql-master: image: mysql:8.0.18 environment: MYSQL_ROOT_PASSWORD: "xxxxx" volumes: - /home/mysql-master/data:/var/lib/mysql - ./contrib/mysql/master.cnf:/etc/my.cnf ports: - 3307:3306 restart: always privileged: true networks: default: aliases: - mysql-master mysql-slave: image: mysql:8.0.18 environment: MYSQL_ROOT_PASSWORD: "xxxxx" volumes: - /mnt/mysql-slave/data:/var/lib/mysql - ./contrib/mysql/slave.cnf:/etc/my.cnf ports: - 3308:3306 restart: always networks: default: aliases: - mysql-slave]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[nginx百宝箱]]></title>
+    <url>%2F2019%2F01%2F22%2Fnginx-note-book%2F</url>
+    <content type="text"><![CDATA[ubuntu nginx 服务取消开机启动: 1update-rc.d -f nginx remove nginx 服务开启开机启动： 1update-rc.d –f nginx defaults nginx 服务启动\重启\停止： 1sudo /etc/init.d/nginx start\restart\stop nginx 服务器开启自启动1systemctl enable nginx nginx 命令1234systemctl start nginx.servicesystemctl stop nginx.servicesystemctl reload nginx.servicesystemctl status nginx.service 反向代理1234567location /v1/ai/&#123; proxy_set_header X-Real-IP $remote_addr; proxy_set_header HOST $http_host; proxy_set_header X-NginX-Proxy true; proxy_pass http://127.0.0.1:9030; proxy_redirect off;&#125;]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[git比较少见的问题]]></title>
+    <url>%2F2019%2F01%2F15%2Ffaqs-of-git%2F</url>
+    <content type="text"><![CDATA[Git clone 时发生“error: index-pack died of signal 9”错误1检查是否内存不够]]></content>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+</search>

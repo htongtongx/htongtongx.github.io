@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.8.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"huangtongwei.cn","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="git 代理设置1234git config --global http.proxy &apos;http://127.0.0.1:1087&apos;git config --global https.proxy &apos;http://127.0.0.1:1087&apos;git config --global http.proxy &apos;socks5://127.0.0.1:1086&apos;git config --global htt">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git百宝箱">
+<meta property="og:url" content="https://huangtongwei.cn/2019/05/03/git-data/index.html">
+<meta property="og:site_name" content="黄童威笔记本">
+<meta property="og:description" content="git 代理设置1234git config --global http.proxy &apos;http://127.0.0.1:1087&apos;git config --global https.proxy &apos;http://127.0.0.1:1087&apos;git config --global http.proxy &apos;socks5://127.0.0.1:1086&apos;git config --global htt">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-12-23T03:09:48.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git百宝箱">
+<meta name="twitter:description" content="git 代理设置1234git config --global http.proxy &apos;http://127.0.0.1:1087&apos;git config --global https.proxy &apos;http://127.0.0.1:1087&apos;git config --global http.proxy &apos;socks5://127.0.0.1:1086&apos;git config --global htt">
+
+<link rel="canonical" href="https://huangtongwei.cn/2019/05/03/git-data/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-Hans'
+  };
+</script>
+
+  <title>git百宝箱 | 黄童威笔记本</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">黄童威笔记本</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" placeholder="Searching..." spellcheck="false" type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope="" itemtype="http://schema.org/Article" class="post-block" lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://huangtongwei.cn/2019/05/03/git-data/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="黄童威">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="黄童威笔记本">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          git百宝箱
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-05-03 14:00:41" itemprop="dateCreated datePublished" datetime="2019-05-03T14:00:41+08:00">2019-05-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-12-23 11:09:48" itemprop="dateModified" datetime="2020-12-23T11:09:48+08:00">2020-12-23</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h3 id="git-代理设置"><a href="#git-代理设置" class="headerlink" title="git 代理设置"></a>git 代理设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy <span class="string">'http://127.0.0.1:1087'</span></span><br><span class="line">git config --global https.proxy <span class="string">'http://127.0.0.1:1087'</span></span><br><span class="line">git config --global http.proxy <span class="string">'socks5://127.0.0.1:1086'</span></span><br><span class="line">git config --global https.proxy <span class="string">'socks5://127.0.0.1:1086'</span></span><br></pre></td></tr></table></figure>
+<h3 id="git取消代理"><a href="#git取消代理" class="headerlink" title="git取消代理"></a>git取消代理</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global --<span class="built_in">unset</span> http.proxy</span><br><span class="line">git config --global --<span class="built_in">unset</span> https.proxy</span><br></pre></td></tr></table></figure>
+<h3 id="git查看代理"><a href="#git查看代理" class="headerlink" title="git查看代理"></a>git查看代理</h3><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ~/.gitconfig</span><br></pre></td></tr></table></figure>
+<h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy</span><br></pre></td></tr></table></figure>
+<h2 id="删除git已缓存的文件夹："><a href="#删除git已缓存的文件夹：" class="headerlink" title="删除git已缓存的文件夹："></a>删除git已缓存的文件夹：</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git rm --cached &quot;文件路径&quot;</span><br><span class="line">git rm -r --cached .vscode/</span><br></pre></td></tr></table></figure>
+<h2 id="设置git的默认编辑器为vim"><a href="#设置git的默认编辑器为vim" class="headerlink" title="设置git的默认编辑器为vim:"></a>设置git的默认编辑器为vim:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global core.editor vim</span><br></pre></td></tr></table></figure>
+<h2 id="注释填写错误重填命令"><a href="#注释填写错误重填命令" class="headerlink" title="注释填写错误重填命令:"></a>注释填写错误重填命令:</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commi --amend</span><br></pre></td></tr></table></figure>
+<h2 id="merge合并到主分支的正确方式"><a href="#merge合并到主分支的正确方式" class="headerlink" title="merge合并到主分支的正确方式"></a>merge合并到主分支的正确方式</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge --no-ff feat-homepage</span><br></pre></td></tr></table></figure>
+<h2 id="删除本地分支"><a href="#删除本地分支" class="headerlink" title="删除本地分支"></a>删除本地分支</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch -d</span><br></pre></td></tr></table></figure>
+<h2 id="git提交规范"><a href="#git提交规范" class="headerlink" title="git提交规范"></a>git提交规范</h2><blockquote>
+<p><a href="https://www.yuque.com/fe9/basic" target="_blank" rel="noopener">https://www.yuque.com/fe9/basic</a></p>
+</blockquote>
+<h4 id="type-是用于说明该-commit-的类型的，一般我们会规定-type-的类型如下："><a href="#type-是用于说明该-commit-的类型的，一般我们会规定-type-的类型如下：" class="headerlink" title="type 是用于说明该 commit 的类型的，一般我们会规定 type 的类型如下："></a>type 是用于说明该 commit 的类型的，一般我们会规定 type 的类型如下：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">feat: 新功能(feature)&lt;br&gt;</span><br><span class="line">fix: 修复 bug&lt;br&gt;</span><br><span class="line">docs: 文档(documents)&lt;br&gt;</span><br><span class="line">style: 代码格式(不影响代码运行的格式变动，注意不是指 CSS 的修改)&lt;br&gt;</span><br><span class="line">refactor: 重构(既不是新增功能，也不是修改 bug 的代码变动)&lt;br&gt;</span><br><span class="line">test: 提交测试代码(单元测试，集成测试等)&lt;br&gt;</span><br><span class="line">chore: 构建或辅助工具的变动&lt;br&gt;</span><br><span class="line">misc: 一些未归类或不知道将它归类到什么方面的提交&lt;br&gt;</span><br><span class="line">scope。scope 说明 commit 影响的范围，比如数据层，控制层，视图层等等，这个需要视具体场景与项目的不同而灵活变动&lt;br&gt;</span><br><span class="line">subject。subject 是对于该 commit 目的的简短描述&lt;br&gt;</span><br><span class="line">使用第一人称现在时的动词开头，比如 modify 而不是 modified 或 modifies&lt;br&gt;</span><br><span class="line">首字母小写，并且结尾不加句号&lt;br&gt;</span><br><span class="line">ISSUEE_ID。这个与公司的需求管理与项目管理有关，假设你的项目放在 github 上，你的需求或者 bug 修复可能会有对应的 issues 记录，你可以加到你的 commit 信息中如 issue-37938634。&lt;br&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="强制将两个不相干的仓库合并"><a href="#强制将两个不相干的仓库合并" class="headerlink" title="强制将两个不相干的仓库合并"></a>强制将两个不相干的仓库合并</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master --allow-unrelated-histories</span><br></pre></td></tr></table></figure>
+<h3 id="分支开发策略"><a href="#分支开发策略" class="headerlink" title="分支开发策略"></a>分支开发策略</h3><p><a href="https://www.liaoxuefeng.com/wiki/896043488029600/900394246995648" target="_blank" rel="noopener">分支管理-廖雪峰</a></p>
+<h3 id="强制覆盖远程分支"><a href="#强制覆盖远程分支" class="headerlink" title="强制覆盖远程分支"></a>强制覆盖远程分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin 分支名 —force</span><br></pre></td></tr></table></figure>
+<h3 id="测试ssh-key是否有效"><a href="#测试ssh-key是否有效" class="headerlink" title="测试ssh_key是否有效"></a>测试ssh_key是否有效</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<h3 id="git未知"><a href="#git未知" class="headerlink" title="git未知"></a>git未知</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git的unshallow和--depth=1</span><br></pre></td></tr></table></figure>
+<h3 id="提交指定文件夹下的所有文件到指定分支"><a href="#提交指定文件夹下的所有文件到指定分支" class="headerlink" title="提交指定文件夹下的所有文件到指定分支"></a>提交指定文件夹下的所有文件到指定分支</h3><p>git subtree push —prefix=dist origin gh-pages<br>git subtree push —prefix=dist <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:htongxxx/xxxx.git gh-pages<br>git push using: <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:htongxxxxx/xxxx.git gh-pages</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/git/" rel="tag"># git</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/01/25/linux-note/" rel="prev" title="linux百宝箱">
+      <i class="fa fa-chevron-left"></i> linux百宝箱
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/07/24/python3-virtualenv/" rel="next" title="python3 virtualenv安装与使用">
+      python3 virtualenv安装与使用 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-代理设置"><span class="nav-number">1.</span> <span class="nav-text">git 代理设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git取消代理"><span class="nav-number">2.</span> <span class="nav-text">git取消代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git查看代理"><span class="nav-number">3.</span> <span class="nav-text">git查看代理</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#方法一"><span class="nav-number">3.0.1.</span> <span class="nav-text">方法一</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#方法二"><span class="nav-number">3.0.2.</span> <span class="nav-text">方法二</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除git已缓存的文件夹："><span class="nav-number"></span> <span class="nav-text">删除git已缓存的文件夹：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设置git的默认编辑器为vim"><span class="nav-number"></span> <span class="nav-text">设置git的默认编辑器为vim:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释填写错误重填命令"><span class="nav-number"></span> <span class="nav-text">注释填写错误重填命令:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#merge合并到主分支的正确方式"><span class="nav-number"></span> <span class="nav-text">merge合并到主分支的正确方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#删除本地分支"><span class="nav-number"></span> <span class="nav-text">删除本地分支</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git提交规范"><span class="nav-number"></span> <span class="nav-text">git提交规范</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#type-是用于说明该-commit-的类型的，一般我们会规定-type-的类型如下："><span class="nav-number">0.1.</span> <span class="nav-text">type 是用于说明该 commit 的类型的，一般我们会规定 type 的类型如下：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#强制将两个不相干的仓库合并"><span class="nav-number"></span> <span class="nav-text">强制将两个不相干的仓库合并</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分支开发策略"><span class="nav-number">1.</span> <span class="nav-text">分支开发策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强制覆盖远程分支"><span class="nav-number">2.</span> <span class="nav-text">强制覆盖远程分支</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#测试ssh-key是否有效"><span class="nav-number">3.</span> <span class="nav-text">测试ssh_key是否有效</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git未知"><span class="nav-number">4.</span> <span class="nav-text">git未知</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交指定文件夹下的所有文件到指定分支"><span class="nav-number">5.</span> <span class="nav-text">提交指定文件夹下的所有文件到指定分支</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">黄童威</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">17</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">黄童威</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/muse.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
